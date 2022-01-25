@@ -1,0 +1,12 @@
+package uz.teasy.pcmarket2.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import uz.teasy.pcmarket2.entity.Cart;
+import uz.teasy.pcmarket2.projection.CustomCart;
+
+
+@RepositoryRestResource(path = "cart", collectionResourceRel = "mylist", excerptProjection = CustomCart.class)
+public interface CartRepository extends JpaRepository<Cart, Integer> {
+
+}
